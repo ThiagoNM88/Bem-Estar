@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Estar - Seu Guia para uma Vida Saudável</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Adicionar outros estilos ou scripts conforme necessário -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card-img {
+            width:  100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .likes {
+            font-size: 0.9em;
+        }
+        .like-button, .dislike-button {
+            font-size: 0.8em;
+            padding: 5px 10px;
+        }
+        .comments textarea {
+            font-size: 0.9em;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <!-- Novo navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.html">BLOG BEM-ESTAR | Saúde Integrada| </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav mr-auto">
+                <a class="nav-item nav-link active" href="index.html">Inicio <span class="sr-only">(Página atual)</span></a>
+                <a class="nav-item nav-link" href="artigos.html">Artigos</a>
+                <a class="nav-item nav-link" href="sobre.html">Sobre</a>
+                <a class="nav-item nav-link disabled" href="#">...</a>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img src="img/LoboBE1.png" width="30" height="30" class="d-inline-block align-top" alt="Logo">
+            </a>
+        </div>
+    </nav>
+    <header>
+        <h1>Artigos</h1>
+        <p>Se você gostou de algum artigo, não deixe de clicar em "Gostei" e comentar</p>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row">
+            <!-- Artigo 1 -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="img/caminhada.png" alt="Benefícios da Caminhada" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Benefícios da Caminhada</h2>
+                                <p class="card-text">A caminhada regular traz diversos benefícios para a saúde:</p>
+                                <ul>
+                                    <li>Melhora a circulação sanguínea.</li>
+                                    <li>Fortalece os músculos e ossos.</li>
+                                    <li>Reduz o estresse e a ansiedade.</li>
+                                </ul>
+                                <div class="likes">
+                                    <button class="like-button btn btn-primary" onclick="toggleCommentForm(1)">Comentar</button>
+                                    <button class="like-button btn btn-primary" onclick="likeArticle(1)">Gostei</button>
+                                    <button class="dislike-button btn btn-danger" onclick="dislikeArticle(1)">Não Gostei</button>
+                                    <span id="like-count-1">0</span> curtidas |
+                                    <span id="dislike-count-1">0</span> não curtidas
+                                </div>
+                                <div class="comments">
+                                    <div id="comment-form-1" class="mt-2" style="display: none;">
+                                        <textarea id="comment-text-1" rows="3" class="form-control form-control-sm"></textarea>
+                                        <button class="comment-button btn btn-primary btn-sm mt-2" onclick="saveComment(1)">Salvar</button>
+                                    </div>
+                                    <div id="comments-section-1" class="mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artigo 2 -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="img/alimentacao.png" alt="Alimentação Saudável" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Alimentação Saudável</h2>
+                                <p class="card-text">Uma alimentação balanceada é essencial para a saúde:</p>
+                                <ul>
+                                    <li>Fornece nutrientes necessários.</li>
+                                    <li>Ajuda na manutenção do peso.</li>
+                                    <li>Previne doenças crônicas.</li>
+                                </ul>
+                                <div class="likes">
+                                    <button class="like-button btn btn-primary" onclick="toggleCommentForm(2)">Comentar</button>
+                                    <button class="like-button btn btn-primary" onclick="likeArticle(2)">Gostei</button>
+                                    <button class="dislike-button btn btn-danger" onclick="dislikeArticle(2)">Não Gostei</button>
+                                    <span id="like-count-2">0</span> curtidas |
+                                    <span id="dislike-count-2">0</span> não curtidas
+                                </div>
+                                <div class="comments">
+                                    <div id="comment-form-2" class="mt-2" style="display: none;">
+                                        <textarea id="comment-text-2" rows="3" class="form-control form-control-sm"></textarea>
+                                        <button class="comment-button btn btn-primary btn-sm mt-2" onclick="saveComment(2)">Salvar</button>
+                                    </div>
+                                    <div id="comments-section-2" class="mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Artigo 3 -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="img/sono.png" alt="Importância do Sono" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Importância do Sono</h2>
+                                <p class="card-text">Ter uma boa noite de sono é fundamental:</p>
+                                <ul>
+                                    <li>Melhora a memória e concentração.</li>
+                                    <li>Fortalece o sistema imunológico.</li>
+                                    <li>Regula o humor e emoções.</li>
+                                </ul>
+                                <div class="likes">
+                                    <button class="like-button btn btn-primary" onclick="toggleCommentForm(3)">Comentar</button>
+                                    <button class="like-button btn btn-primary" onclick="likeArticle(3)">Gostei</button>
+                                    <button class="dislike-button btn btn-danger" onclick="dislikeArticle(3)">Não Gostei</button>
+                                    <span id="like-count-3">0</span> curtidas |
+                                    <span id="dislike-count-3">0</span> não curtidas
+                                </div>
+                                <div class="comments">
+                                    <div id="comment-form-3" class="mt-2" style="display: none;">
+                                        <textarea id="comment-text-3" rows="3" class="form-control form-control-sm"></textarea>
+                                        <button class="comment-button btn btn-primary btn-sm mt-2" onclick="saveComment(3)">Salvar</button>
+                                    </div>
+                                    <div id="comments-section-3" class="mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artigo 4 -->
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="img/meditar.png" alt="Dicas de Meditação" class="card-img">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h2 class="card-title">Dicas de Meditação</h2>
+                                <p class="card-text">A meditação pode trazer muitos benefícios:</p>
+                                <ul>
+                                    <li>Reduz o estresse.</li>
+                                    <li>Melhora a concentração.</li>
+                                    <li>Promove o bem-estar emocional.</li>
+                                </ul>
+                                <div class="likes">
+                                    <button class="like-button btn btn-primary" onclick="toggleCommentForm(4)">Comentar</button>
+                                    <button class="like-button btn btn-primary" onclick="likeArticle(4)">Gostei</button>
+                                    <button class="dislike-button btn btn-danger" onclick="dislikeArticle(4)">Não Gostei</button>
+                                    <span id="like-count-4">0</span> curtidas |
+                                    <span id="dislike-count-4">0</span> não curtidas
+                                </div>
+                                <div class="comments">
+                                    <div id="comment-form-4" class="mt-2" style="display: none;">
+                                        <textarea id="comment-text-4" rows="3" class="form-control form-control-sm"></textarea>
+                                        <button class="comment-button btn btn-primary btn-sm mt-2" onclick="saveComment(4)">Salvar</button>
+                                    </div>
+                                    <div id="comments-section-4" class="mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Sobre Nós</h5>
+                    <p>Somos um blog dedicado a proporcionar informações valiosas para uma vida saudável e equilibrada.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links Úteis</h5>
+                    <ul>
+                        <a href="index.html">Início</a>
+                        <a href="artigos.html">Artigos</a>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contato</h5>
+                    <p>Email: thiagonicoleti88@blogbemestar.com</p>
+                    <p>Telefone: (15) 1234-5678</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2024 Blog Bem-Estar. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Adicione rodapé ou outras seções conforme necessário -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Importe os scripts do Bootstrap -->
+    <script src="scripts.js"></script>
+</body>
+</html>
