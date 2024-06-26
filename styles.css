@@ -1,0 +1,128 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+
+article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.comments textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comments button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.comments button:hover {
+    background-color: #3d3b41;
+}
+
+
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #563d7c !important; /* Fundo roxo escuro */
+    color: #ffffff; /* Texto branco */
+}
+
+.navbar-brand {
+    font-size: 24px; /* Aumenta o tamanho da fonte do nome do blog */
+    color: #ffffff !important; /* Cor do texto da marca */
+}
+
+.navbar-brand .yellow-text {
+    color: #ffc107; /* Cor amarela para o texto "| B |" */
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important; /* Cor dos links */
+}
+
+/* Centraliza os links na barra de navegação */
+.navbar-nav {
+    justify-content: center;
+}
+
+/* Estiliza os botões */
+.nav-link {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+    background-color: #e2e6ea; /* Cor de fundo ao passar o mouse */
+    color: #563d7c !important; /* Cor do texto ao passar o mouse */
+}
+
+.centraliza-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.centraliza-container img {
+    max-width: 100%; /* Ajuste conforme necessário */
+    height: auto; /* Ajuste conforme necessário */
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+footer h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+footer p {
+    margin: 0 0 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .text-center {
+    text-align: center;
+    margin-top: 20px;
+}
